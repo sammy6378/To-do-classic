@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:url(home-image2b.jpg) no-repeat center center/cover;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.content{
+background: radial-gradient(#e1efff, white);
+ max-height: 400px;
+ max-width: 100%;
+}
+
+.content,.added{
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    max-width: 100%;
+}
+
+.content .text{
+    padding: 14px;
+}
+
+.content #input{
+    background: #fffeff;
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    outline: none;
+}
+
+.btn{
+    max-width: 100%;
+    padding: 12px 12px;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 30%;
+    background: transparent;
+    border: 2px solid green;
+}
+
+.added{
+    max-width: 100%;
+    visibility: hidden;
+    position: relative;
+    top: -40px;
+    transition: all .40s ease;
+    border-radius: 2px;
+}
+
+.active{
+    max-width: 100%;
+    visibility: visible;
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+    top: 10px;
+    transition: all .40s ease;
+}
+
+.list-item{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    text-align: center;
+    list-style: none;
+    padding: 6px;
+    font-size: 1.2rem;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+    transition: margin-top 0.4s ease;
+}
+
+.btns{
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    gap: 10px;
+}
+
+.done, .del{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 4px;
+}
+
+
+.del .trash, .done .ok{
+    width:35px;
+    height:35px;
+}
+
+.completed{
+    padding: 10px;
+}
+
+
+@media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .content{
+        max-height: 500px;
+        width:calc(100% - 70px);
+    }
+
+    .content h1{
+        font-size: 1.2rem;
+    }
+
+    #input{
+        width: calc(100%-50px);
+    }
+
+    .btn{
+        width:calc(100% - 100px);
+    }
+
+    .completed{
+        width:calc(100% - 70px);
+    }
+
+    .active{
+        width:calc(100% - 70px);
+    }
+}
